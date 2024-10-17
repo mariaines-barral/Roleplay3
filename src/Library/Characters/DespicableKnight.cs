@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 namespace Ucu.Poo.RoleplayGame;
 
-public class Knight: Hero
+public class DespicableKnight: Enemy
 {
-    public Knight(string name) : base(name)
+    public DespicableKnight(string name, int vp) : base(name, vp)
     {
         IItem sword = new Sword();
         IItem shield = new Shield();
