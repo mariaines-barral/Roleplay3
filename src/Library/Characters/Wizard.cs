@@ -3,8 +3,10 @@ namespace Ucu.Poo.RoleplayGame;
 
 public class Wizard: MagicalHero
 {
-    public Wizard(string name, int vp) : base(name, vp)
+    public Wizard(string name) : base(name)
     {
+        this.AddItem(new Staff());
+        this.AddItem(new SpellsBook());
     }   
 
 }
