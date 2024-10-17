@@ -77,7 +77,7 @@ public class Encounter
         }
     }
 
-    public void AddHero(Hero hero)
+    public void AddToEncounter(Hero hero)
     {
         if (!this.Heroes.Contains(hero))
         {
@@ -86,7 +86,7 @@ public class Encounter
             
     }
 
-    public void AddEnemy(Enemy enemy)
+    public void AddToEncounter(Enemy enemy)
     {
         if (!this.Enemies.Contains(enemy))
         {
