@@ -10,7 +10,7 @@ class Program
         Knight caballeroBueno = new Knight("Caballero Bueno");
         DespicableKnight caballeroMalo = new DespicableKnight("Caballero Malo", 1);
         MalignantDwarf dwarfMalandro = new MalignantDwarf("Dwarf Malandro", 1);
-        Battlefield batalla = new Battlefield();
+        Encounter batalla = new Encounter();
         batalla.AddEnemy(caballeroMalo);
         batalla.AddEnemy(dwarfMalandro);
         batalla.AddHero(caballeroBueno);
@@ -18,7 +18,7 @@ class Program
         
         
         Dwarf dwarfbueno = new Dwarf("Dwarf Bueno");
-        Battlefield batalla2 = new Battlefield();
+        Encounter batalla2 = new Encounter();
         batalla2.AddEnemy(caballeroMalo);
         //batalla2.AddEnemy(dwarfMalandro);
         batalla2.AddHero(caballeroBueno);
