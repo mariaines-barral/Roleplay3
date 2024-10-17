@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 namespace Ucu.Poo.RoleplayGame;
 
 public class MalignantDwarf: Enemy
@@ -13,3 +12,4 @@ public class MalignantDwarf: Enemy
         this.AddItem(helmet);
     }
 }
+

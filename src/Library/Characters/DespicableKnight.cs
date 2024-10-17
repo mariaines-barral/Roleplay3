@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 namespace Ucu.Poo.RoleplayGame;
 
 public class DespicableKnight: Enemy
@@ -13,3 +12,4 @@ public class DespicableKnight: Enemy
         this.AddItem(armor);
     }
 }
+

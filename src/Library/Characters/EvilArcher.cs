@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 namespace Ucu.Poo.RoleplayGame;
 
 public class EvilArcher: Enemy

@@ -5,9 +5,7 @@ public class Archer: Hero
 {
     public Archer(string name) : base(name)
     {
-        IItem bow = new Bow();
-        IItem helmet = new Helmet();
-        this.AddItem(bow);
-        this.AddItem(helmet);
+        this.AddItem(new Bow());
+        this.AddItem(new Helmet());
     }
 }

@@ -5,11 +5,7 @@ public class Knight: Hero
 {
     public Knight(string name) : base(name)
     {
-        IItem sword = new Sword();
-        IItem shield = new Shield();
-        IItem armor = new Armor();
-        this.AddItem(sword);
-        this.AddItem(shield);
-        this.AddItem(armor);
+        this.AddItem(new Sword());
+        this.AddItem(new Armor());
     }
 }
