@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 namespace Ucu.Poo.RoleplayGame;
 
-public class Dwarf: Hero
+public class MalignantDwarf: Enemy
 {
-    public Dwarf(string name) : base(name)
+    public MalignantDwarf(string name, int vp) : base(name, vp)
     {
         IItem axe = new Axe();
         IItem shield = new Shield();

@@ -1,6 +1,6 @@
 namespace Ucu.Poo.RoleplayGame;
 
-public abstract class MagicalHero : Hero
+public abstract class MagicalEnemy : Enemy
 {
        private List<IMagicalItem> magicalItems = new List<IMagicalItem>();
 
@@ -14,7 +14,7 @@ public abstract class MagicalHero : Hero
            this.magicalItems.Remove(magicalItem);
        }
 
-       public MagicalHero(string name) : base(name)
+       public MagicalEnemy(string name, int vp) : base(name, vp)
        {
 
        }

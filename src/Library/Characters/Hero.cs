@@ -4,8 +4,8 @@ public abstract class Hero : Character
 {
     public int VP { get; set; }
     
-    public Hero(string name, int vp) : base(name)
+    public Hero(string name) : base(name)
     {
-        this.VP = vp;
+        this.VP = 0;
     }
 }
