@@ -7,7 +7,7 @@ public class Encounter
     public List<Hero> Heroes { get; private set; } = new List<Hero>();
     public List<Enemy> Enemies { get; private set; } = new List<Enemy>();
 
-    public virtual void DoEncounter()
+    public void DoEncounter()
     {
         while (this.Heroes.Count != 0 && this.Enemies.Count != 0)
         {
@@ -16,8 +16,8 @@ public class Encounter
                 int count = 0; //cuenta enemigos que ya pegaron
                 while (count < this.Enemies.Count && this.Heroes.Count > 0) //chequeo que queden enemigos por atacar
                 {
-                    foreach(Hero hero in this.Heroes.ToList()) //todos los heroes son atacados
-                    {   
+                    foreach (Hero hero in this.Heroes.ToList()) //todos los heroes son atacados
+                    {
                         if (count < this.Enemies.Count) //vuelvo a chequear que queden enemigos por atacar
                         {
                             hero.ReceiveAttack(this.Enemies[count].AttackValue);
@@ -25,10 +25,11 @@ public class Encounter
                             {
                                 this.Heroes.Remove(hero);
                             }
+
                             count++; //siguiente enemigo
                         }
                     }
-                    
+
                 }
             }
             else //menos enemigos o misma cantidad
@@ -42,7 +43,7 @@ public class Encounter
                     }
                 }
             }
-            
+
             // le toca a los heroes
             foreach (Enemy enemy in this.Enemies.ToList()) //cada enemigo es golpeado por todos los heroes
             {
@@ -83,7 +84,7 @@ public class Encounter
         {
             this.Heroes.Add(hero);
         }
-            
+
     }
 
     public void AddEnemy(Enemy enemy)

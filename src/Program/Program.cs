@@ -20,7 +20,7 @@ class Program
         Dwarf dwarfbueno = new Dwarf("Dwarf Bueno");
         Encounter batalla2 = new Encounter();
         batalla2.AddEnemy(caballeroMalo);
-        //batalla2.AddEnemy(dwarfMalandro);
+        // batalla2.AddEnemy(dwarfMalandro);
         batalla2.AddHero(caballeroBueno);
         batalla2.AddHero(dwarfbueno);
         batalla2.DoEncounter();

@@ -11,7 +11,7 @@ public abstract class Character
         this.Name = name;
     }
 
-    public string Name { get; set; }
+    public string Name { get; private set; }
 
     public int AttackValue
     {
@@ -78,5 +78,10 @@ public abstract class Character
     public void RemoveItem(IItem item)
     {
         this.items.Remove(item);
+    }
+
+    public List<IItem> GetItemList()
+    {
+        return this.items;
     }
 }
