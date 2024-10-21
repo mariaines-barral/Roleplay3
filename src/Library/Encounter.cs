@@ -7,7 +7,7 @@ public class Encounter
     public List<Hero> Heroes { get; private set; } = new List<Hero>();
     public List<Enemy> Enemies { get; private set; } = new List<Enemy>();
 
-    public virtual void DoEncounter()
+    public virtual void DoEncounter() 
     {
         while (this.Heroes.Count != 0 && this.Enemies.Count != 0)
         {
