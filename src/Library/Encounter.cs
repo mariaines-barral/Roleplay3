@@ -2,7 +2,7 @@ using Ucu.Poo.RoleplayGame;
 
 namespace Library;
 
-public class Battlefield
+public class Encounter
 {
     public List<Hero> Heroes { get; private set; } = new List<Hero>();
     public List<Enemy> Enemies { get; private set; } = new List<Enemy>();
@@ -77,7 +77,7 @@ public class Battlefield
         }
     }
 
-    public void AddHero(Hero hero)
+    public void AddToEncounter(Hero hero)
     {
         if (!this.Heroes.Contains(hero))
         {
@@ -86,7 +86,7 @@ public class Battlefield
             
     }
 
-    public void AddEnemy(Enemy enemy)
+    public void AddToEncounter(Enemy enemy)
     {
         if (!this.Enemies.Contains(enemy))
         {

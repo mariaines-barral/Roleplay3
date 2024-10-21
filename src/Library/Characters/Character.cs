@@ -4,7 +4,7 @@ public abstract class Character
 {
     private int health = 100;
 
-    private List<IItem> items = new List<IItem>();
+    public List<IItem> items { get; private set; } = new List<IItem>();
 
     public Character(string name)
     {

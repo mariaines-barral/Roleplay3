@@ -10,19 +10,19 @@ class Program
         Knight caballeroBueno = new Knight("Caballero Bueno");
         DespicableKnight caballeroMalo = new DespicableKnight("Caballero Malo", 1);
         MalignantDwarf dwarfMalandro = new MalignantDwarf("Dwarf Malandro", 1);
-        Battlefield batalla = new Battlefield();
-        batalla.AddEnemy(caballeroMalo);
-        batalla.AddEnemy(dwarfMalandro);
-        batalla.AddHero(caballeroBueno);
+        Encounter batalla = new Encounter();
+        batalla.AddToEncounter(caballeroMalo);
+        batalla.AddToEncounter(dwarfMalandro);
+        batalla.AddToEncounter(caballeroBueno);
         batalla.DoEncounter();
         
         
         Dwarf dwarfbueno = new Dwarf("Dwarf Bueno");
-        Battlefield batalla2 = new Battlefield();
-        batalla2.AddEnemy(caballeroMalo);
+        Encounter batalla2 = new Encounter();
+        batalla2.AddToEncounter(caballeroMalo);
         //batalla2.AddEnemy(dwarfMalandro);
-        batalla2.AddHero(caballeroBueno);
-        batalla2.AddHero(dwarfbueno);
+        batalla2.AddToEncounter(caballeroBueno);
+        batalla2.AddToEncounter(dwarfbueno);
         batalla2.DoEncounter();
     }
 }
