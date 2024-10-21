@@ -7,10 +7,12 @@ public class Encounter
     public List<Hero> Heroes { get; private set; } = new List<Hero>();
     public List<Enemy> Enemies { get; private set; } = new List<Enemy>();
 
-    public virtual void DoEncounter() 
+    public virtual void DoEncounter() //metodo virtual para permitir otras implementaciones a futuro
     {
-        while (this.Heroes.Count != 0 && this.Enemies.Count != 0)
+        int contador = 0;
+        while (this.Heroes.Count != 0 && this.Enemies.Count != 0 && contador < 1000)
         {
+            contador++;
             if (this.Heroes.Count < this.Enemies.Count) //menos heroes
             {
                 int count = 0; //cuenta enemigos que ya pegaron
@@ -67,13 +69,17 @@ public class Encounter
             }
         }
 
-        if (this.Heroes.Count > 0)
+        if (this.Heroes.Count > this.Enemies.Count)
         {
             Console.WriteLine("Los heroes ganaron :)");
         }
-        else
+        else if (this.Enemies.Count > this.Heroes.Count)
         {
             Console.WriteLine("Los enemigos ganaron :(");
+        }
+        else
+        {
+            Console.WriteLine("Empate :|");
         }
     }
 

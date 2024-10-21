@@ -26,8 +26,24 @@ public class EncounterTest
     }
 
     [Test]
-    public void AddToEnocunter()
+    public void TestAddToEnocunter()
     {
-        
+        batalla.AddToEncounter(magoBueno);
+        batalla.AddToEncounter(magoMalo);
+        Assert.That(batalla.Enemies.Contains(magoMalo));
+        Assert.That(batalla.Heroes.Contains(magoBueno));
+        batalla.AddToEncounter(arqueroBueno);
+        Assert.That(batalla.Heroes.Count, Is.EqualTo(2));
+    }
+    
+    [Test]
+    public void TestVPAndCure()
+    {
+        arqueroBueno.AddItem(new Axe());
+        batalla.AddToEncounter(enanoMalo);
+        batalla.AddToEncounter(arqueroBueno);
+        batalla.DoEncounter();
+        Assert.That(arqueroBueno.VP, Is.EqualTo(1));
+        Assert.That(arqueroBueno.Health, Is.EqualTo(100));
     }
 }
